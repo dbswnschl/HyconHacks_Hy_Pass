@@ -13,6 +13,7 @@ public class MnemonicActivity extends AppCompatActivity {
     ImageButton btn_ichecked;
     String mnemonic;
     String address;
+    String myNick;
     TextView mnemonic_1;
     TextView mnemonic_2;
 
@@ -25,6 +26,7 @@ public class MnemonicActivity extends AppCompatActivity {
         btn_ichecked = (ImageButton)findViewById(R.id.btn_ichecked);
         mnemonic = getIntent().getStringExtra("mnemonic");
         address = getIntent().getStringExtra("address");
+        myNick = getIntent().getStringExtra("myNick");
         String [] arr_mnemonic = mnemonic.split(" ");
         String txt1 = "1. "+arr_mnemonic[0];
         String txt2 = "7. "+arr_mnemonic[6];
@@ -45,7 +47,8 @@ public class MnemonicActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MnemonicActivity.this,MainActivity.class);
-                intent.putExtra("address",address);
+                intent.putExtra("walletId",address);
+                intent.putExtra("myNick",myNick);
                 startActivity(intent);
             }
         });

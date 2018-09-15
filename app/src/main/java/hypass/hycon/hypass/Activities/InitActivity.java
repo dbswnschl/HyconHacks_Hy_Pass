@@ -33,10 +33,12 @@ public class InitActivity extends AppCompatActivity {
         super.onStart();
         SharedPreferences pref = getSharedPreferences("pref", Context.MODE_PRIVATE); // 선언
         String walletId = pref.getString("walletId", null);
+        String myNick = pref.getString("myNick", null);
         boolean isinit = getIntent().getBooleanExtra("init",false);
         if (walletId != null && isinit == false) {
             Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra("walletId",walletId);
+            intent.putExtra("myNick",myNick);
             startActivity(intent);
             finish();
 

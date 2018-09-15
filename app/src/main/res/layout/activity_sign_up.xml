@@ -16,7 +16,7 @@
         <EditText
             android:id="@+id/text_sign_up_nickname"
             android:layout_width="100dp"
-            android:hint=" User Id"
+            android:hint="Input NickName"
 
             app:scale_top="649"
             app:scale_left="288.5"
@@ -61,6 +61,7 @@
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
             android:fontFamily="Andale Mono"
+            android:inputType="textPassword" />
             android:inputType="text"/>
         <ImageButton
             android:background="@drawable/confirm"

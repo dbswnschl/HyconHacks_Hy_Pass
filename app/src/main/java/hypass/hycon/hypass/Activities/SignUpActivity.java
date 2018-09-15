@@ -5,12 +5,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import hypass.hycon.hypass.Connections.PostConnection;
@@ -70,7 +74,16 @@ public class SignUpActivity extends AppCompatActivity {
                 try {
                     post.execute().get();
                     JSONObject resultObj = post.resultObj; // 응답데이터 조회
+                    try {
+                        if (resultObj.getString("error") != null) {
+                            Toast.makeText(SignUpActivity.this, "NickName is Already Exist ! ", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                    } catch (Exception exc) {
+                        ;
+                    }
 
+                    Log.d("TAG,T", resultObj.toString());
                     mnemonic = resultObj.getString("mnemonic").toString();
                     walletId = resultObj.getString("address").toString();
                     privateKey = resultObj.getString("privateKey").toString();
@@ -79,6 +92,7 @@ public class SignUpActivity extends AppCompatActivity {
                         Intent intent = new Intent(SignUpActivity.this, WarnningActivity.class);
                         intent.putExtra("mnemonic", mnemonic);
                         intent.putExtra("walletId", walletId);
+                        intent.putExtra("myNick", text_sign_up_nickname.getText().toString());
 
                         SharedPreferences pref = getSharedPreferences("pref", Context.MODE_PRIVATE); // 선언
 
@@ -88,10 +102,27 @@ public class SignUpActivity extends AppCompatActivity {
                         editor.putString("myNick", text_sign_up_nickname.getText().toString());
                         editor.putString("password", text_sign_up_pw.getText().toString());
                         editor.putString("privateKey", privateKey);
+                        JSONObject myWallet = new JSONObject();
+                        myWallet.put("walletId", walletId);
+                        myWallet.put("myNick", text_sign_up_nickname.getText().toString());
+                        myWallet.put("password", text_sign_up_pw.getText().toString());
+                        myWallet.put("privateKey", privateKey);
+                        JSONArray jsonArray;
+                        String prevwallet = pref.getString("mywallet", null);
+                        if (prevwallet == null) {
+                            jsonArray = new JSONArray();
+                            jsonArray.put(myWallet);
+                        } else {
+                            jsonArray = new JSONArray(prevwallet);
+                            jsonArray.put(myWallet);
+
+                        }
+                        Gson gson = new Gson();
+                        String json = gson.toJson(jsonArray);
+                        editor.putString("mywallet", json);
+                        editor.commit();
 
 
-
-                        editor.commit(); //완료한다.
                         startActivity(intent);
                     }
 

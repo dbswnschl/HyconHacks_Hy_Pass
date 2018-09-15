@@ -4,13 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/mywallet"
+    android:background="@drawable/mywalletback"
     tools:context=".Fragments.MyPageFragment">
     <com.ssomai.android.scalablelayout.ScalableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:scale_base_height="2295"
         app:scale_base_width="1440">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text=""
+            android:id="@+id/txt_nickName"
+            app:scale_height="150"
+            app:scale_width="800"
+            app:scale_top="672"
+            app:scale_textsize="85"
+            android:textColor="#ffffff"
+            app:scale_left="300"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -19,7 +33,7 @@
             android:id="@+id/txt_current_price"
             app:scale_height="150"
             app:scale_width="800"
-            app:scale_top="787"
+            app:scale_top="1022"
             app:scale_textsize="85"
             android:textColor="#ffffff"
             app:scale_left="300"/>
@@ -44,7 +58,7 @@
             android:text="00.00"
             app:scale_height="150"
             app:scale_width="800"
-            app:scale_top="1193"
+            app:scale_top="1372"
             app:scale_textsize="85"
             android:textColor="#ffffff"
             app:scale_left="300"/>
@@ -68,7 +82,7 @@
             android:text="00.00"
             app:scale_height="150"
             app:scale_width="800"
-            app:scale_top="1590"
+            app:scale_top="1722"
             app:scale_textsize="85"
             android:textColor="#ffffff"
             app:scale_left="300"/>

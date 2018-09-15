@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import hypass.hycon.hypass.Connections.PostConnection;
@@ -54,9 +57,31 @@ public class SignInActivity extends AppCompatActivity {
                     editor.putString("myNick", text_sign_in_nickname.getText().toString());
                     editor.putString("walletId",address);
                     editor.putString("privateKey",privateKey);
+                    editor.putString("password",text_sign_in_pw.getText().toString());
+
+                    JSONObject myWallet = new JSONObject();
+                    myWallet.put("walletId", address);
+                    myWallet.put("myNick", text_sign_in_nickname.getText().toString());
+                    myWallet.put("password", text_sign_in_pw.getText().toString());
+                    myWallet.put("privateKey", privateKey);
+                    JSONArray jsonArray;
+                    String prevwallet = pref.getString("mywallet", null);
+                    if (prevwallet == null) {
+                        jsonArray = new JSONArray();
+                        jsonArray.put(myWallet);
+                    } else {
+                        jsonArray = new JSONArray(prevwallet);
+                        jsonArray.put(myWallet);
+
+                    }
+                    Gson gson = new Gson();
+                    String json = gson.toJson(jsonArray);
+                    editor.putString("mywallet", json);
+
                     editor.commit();
                     Intent intent = new Intent(SignInActivity.this, MainActivity.class);
                     intent.putExtra("walletId",address);
+                    intent.putExtra("myNick",text_sign_in_nickname.getText().toString());
                     startActivity(intent);
                     finish();
 

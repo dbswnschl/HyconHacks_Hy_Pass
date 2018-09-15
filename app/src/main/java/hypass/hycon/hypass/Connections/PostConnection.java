@@ -72,8 +72,8 @@ public class PostConnection extends AsyncTask {
         try {
             URL url = new URL(this.url);
             urlConn = (HttpURLConnection) url.openConnection();
-            urlConn.setConnectTimeout(10000);
-            urlConn.setReadTimeout(10000);
+//            urlConn.setConnectTimeout(10000);
+//            urlConn.setReadTimeout(10000);
 
             // [2-1]. urlConn 설정.
             urlConn.setRequestMethod("POST"); // URL 요청에 대한 메소드 설정 : POST.
