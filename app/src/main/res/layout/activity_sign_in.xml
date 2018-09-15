@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SignInActivity"
+    android:background="@drawable/recoverwallet">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_width="1440"
+        app:scale_base_height="2560">
+
+        <EditText
+            android:id="@+id/text_sign_in_nickname"
+            android:layout_width="100dp"
+            android:hint=" User Id"
+            android:fontFamily="Andale Mono"
+
+            app:scale_top="649"
+            app:scale_left="288.5"
+            app:scale_width="909"
+            app:scale_height="200"
+            app:scale_textsize="70"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/text_sign_in_pw"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint=" User Password"
+            android:fontFamily="Andale Mono"
+
+            app:scale_top="1006"
+            app:scale_left="288.5"
+            app:scale_width="909"
+            app:scale_height="200"
+            app:scale_textsize="70"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:inputType="textPassword" />
+
+
+        <EditText
+            android:id="@+id/text_sign_in_mnemonic"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Mnemonic"
+            android:fontFamily="Andale Mono"
+
+            app:scale_top="1364"
+            app:scale_left="288.5"
+            app:scale_width="909"
+            app:scale_height="200"
+            app:scale_textsize="70"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:singleLine="true"/>
+
+        <ImageButton
+            android:background="@drawable/confirm"
+            android:id="@+id/btn_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_top="1810"
+            app:scale_left="239"
+            app:scale_width="961"
+            app:scale_height="179"
+
+            />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</FrameLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+
+<com.ssomai.android.scalablelayout.ScalableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:scale_base_height="2880"
+    app:scale_base_width="1440"
+    tools:context=".Activities.InitActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blue"
+        app:scale_height="179"
+        app:scale_left="374"
+        app:scale_top="1014"
+        app:scale_width="692" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blue"
+        app:scale_height="179"
+        app:scale_left="374"
+        app:scale_top="1389"
+        app:scale_width="682" />
+
+    <Button
+        android:id="@+id/btn_no_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEW WALLET"
+        android:fontFamily="Andale Mono"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/blue"
+        app:scale_textsize="70"
+        app:scale_height="179"
+        app:scale_left="374"
+        app:scale_top="1014"
+        app:scale_width="692" />
+
+    <Button
+        android:id="@+id/btn_yes_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue"
+        android:textColor="#FFFFFF"
+        android:text="RECOVER WALLET"
+        android:fontFamily="Andale Mono"
+        app:scale_textsize="70"
+        app:scale_height="179"
+        app:scale_left="374"
+        app:scale_top="1389"
+        app:scale_width="682" />
+
+
+</com.ssomai.android.scalablelayout.ScalableLayout>
+</FrameLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/sendback"
+    tools:context=".Fragments.SendFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="2800"
+        app:scale_base_width="1440">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:scale_height="200"
+            app:scale_width="850"
+            app:scale_top="500"
+            app:scale_textsize="85"
+            app:scale_left="350"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+
+
+
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="보낼 금액 입력"
+            android:id="@+id/txt_send_hyc"
+            app:scale_height="200"
+            app:scale_width="780"
+            app:scale_top="830"
+            app:scale_textsize="85"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#ffffff"
+            android:background="@null"
+            android:lines="1"
+            android:inputType="number"
+            app:scale_left="250"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:background="@null"
+            android:hint="Fee 입력"
+            android:id="@+id/txt_send_fee"
+            app:scale_height="200"
+            app:scale_width="780"
+            app:scale_top="1150"
+            app:scale_textsize="85"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#ffffff"
+            android:lines="1"
+            android:inputType="number"
+            app:scale_left="250"/>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sendbtn"
+            android:id="@+id/btn_send"
+            app:scale_width="961"
+            app:scale_height="179"
+            app:scale_top="1633"
+            app:scale_left="240"/>
+
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+
+</FrameLayout>

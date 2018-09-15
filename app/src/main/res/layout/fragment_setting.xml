@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SettingFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/settingback">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="2800"
+        app:scale_base_width="1440">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selectwallet"
+            android:id="@+id/btn_selectwallet"
+            app:scale_width="961"
+            app:scale_height="179"
+            app:scale_top="556"
+            app:scale_left="240"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/generatewallet"
+            android:id="@+id/btn_generatewallet"
+            app:scale_width="961"
+            app:scale_height="179"
+            app:scale_top="805"
+            app:scale_left="240"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recoverwalletbtn"
+            android:id="@+id/btn_recoverwallet"
+            app:scale_width="961"
+            app:scale_height="179"
+            app:scale_top="1054"
+            app:scale_left="240"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/donation"
+            android:id="@+id/btn_donation"
+            app:scale_width="961"
+            app:scale_height="179"
+            app:scale_top="1303"
+            app:scale_left="240"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/contactus"
+            android:id="@+id/btn_contactus"
+            app:scale_width="961"
+            app:scale_height="179"
+            app:scale_top="1552"
+            app:scale_left="240"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

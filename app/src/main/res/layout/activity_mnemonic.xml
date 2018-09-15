@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mnemonic"
+    tools:context=".Activities.MnemonicActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="2560"
+        app:scale_base_width="1440">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1. testdata\n\n2. testdata\n\n3. testdata\n\ntestdata\n\ntestdata\n\ntestdata"
+            app:scale_width="600"
+            app:scale_height="1200"
+            app:scale_textsize="80"
+            app:scale_top="540"
+            app:scale_left="120"
+            android:id="@+id/mnemonic_1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="testdata\n\ntestdata\n\ntestdata\n\ntestdata\n\ntestdata\n\ntestdata"
+            app:scale_width="600"
+            app:scale_height="1200"
+            app:scale_textsize="80"
+            app:scale_top="540"
+            app:scale_left="700"
+            android:id="@+id/mnemonic_2"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_ichecked"
+            android:background="@drawable/ichecked"
+            app:scale_height="156"
+            app:scale_width="853"
+            app:scale_top="1850"
+            app:scale_left="294"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+
+
+
+</FrameLayout>

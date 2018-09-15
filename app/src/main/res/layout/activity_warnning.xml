@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.WarnningActivity"
+    android:background="@drawable/warnning">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_width="1440"
+        app:scale_base_height="2560">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_igotit"
+        android:background="@drawable/igotit"
+        app:scale_width="853"
+        app:scale_height="156"
+        app:scale_top="1800"
+        app:scale_left="294"
+        />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

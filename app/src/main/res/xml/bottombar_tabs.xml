@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <tabs>
+        <tab
+            id="@+id/tab_home"
+            icon="@drawable/person"
+            barColorWhenSelected="#FFFFFF"
+            title="Home" />
+        <tab
+            id="@+id/tab_send"
+            icon="@drawable/send"
+            barColorWhenSelected="#FFFFFF"
+            title="Remit" />
+        <tab
+            id="@+id/tab_exchange"
+            icon="@drawable/exchange"
+            barColorWhenSelected="#FFFFFF"
+            title="Exchange" />
+        <tab
+            id="@+id/tab_contacts"
+            icon="@drawable/contacts"
+            barColorWhenSelected="#FFFFFF"
+            title="Contacts" />
+        <tab
+            id="@+id/tab_setting"
+            icon="@drawable/setting"
+            barColorWhenSelected="#FFFFFF"
+            title="Setting" />
+    </tabs>
+</PreferenceScreen>

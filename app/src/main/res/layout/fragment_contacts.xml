@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ContactsFragment"
+    android:background="@drawable/contactsback">
+
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="2800"
+        app:scale_base_width="1440">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/friendlist"
+            android:id="@+id/btn_friendlist"
+            app:scale_width="961"
+            app:scale_height="179"
+            app:scale_top="774"
+            app:scale_left="240"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/addfriend"
+            android:id="@+id/btn_addfriend"
+            app:scale_width="961"
+            app:scale_height="179"
+            app:scale_top="1103"
+            app:scale_left="240"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/delfriend"
+            android:id="@+id/btn_deletefriend"
+            app:scale_width="961"
+            app:scale_height="179"
+            app:scale_top="1432"
+            app:scale_left="240"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+
+</FrameLayout>
