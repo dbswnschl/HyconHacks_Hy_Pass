@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
@@ -73,9 +72,9 @@ public class SettingFragment extends Fragment {
                 String mywallet = pref.getString("mywallet",null);
                 try {
                     if(mywallet !=null) {
-                        Gson gson = new Gson();
-                        JSONObject jsonObject = (JSONObject) (new JSONObject(mywallet));
-                        jsonArray =(JSONArray) jsonObject.get("values");
+
+//                        JSONObject jsonObject = (JSONObject) (new JSONObject(mywallet));
+                        jsonArray =new JSONArray(mywallet);
 
 //                        jsonArray = gson.fromJson(mywallet,JSONArray.class);
 
@@ -84,9 +83,8 @@ public class SettingFragment extends Fragment {
 
 
                         for (int i = 0; i < jsonArray.length(); i++) {
-                            ;
-                            arrayAdapter.add(((JSONObject)((JSONObject)jsonArray.get(i) ).get("nameValuePairs") ).getString("myNick"));
-                        }
+                            arrayAdapter.add(jsonArray.getJSONObject(i).getString("myNick"));
+                             }
 
                         //                arrayAdapter = new ArrayAdapter<String>(getContext(),Address_arr);
 

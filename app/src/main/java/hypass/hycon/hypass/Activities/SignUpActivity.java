@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -108,17 +107,21 @@ public class SignUpActivity extends AppCompatActivity {
                         myWallet.put("password", text_sign_up_pw.getText().toString());
                         myWallet.put("privateKey", privateKey);
                         JSONArray jsonArray;
+                        editor.commit();
                         String prevwallet = pref.getString("mywallet", null);
                         if (prevwallet == null) {
                             jsonArray = new JSONArray();
                             jsonArray.put(myWallet);
                         } else {
+//                            JSONObject jsonObject = new JSONObject(prevwallet);
+//                            jsonArray =(JSONArray) jsonObject.get("values");
+//                            ((JSONObject)((JSONObject)jsonArray.get(i) ).get("nameValuePairs") ).getString("myNick")
                             jsonArray = new JSONArray(prevwallet);
                             jsonArray.put(myWallet);
-
                         }
-                        Gson gson = new Gson();
-                        String json = gson.toJson(jsonArray);
+//                        Gson gson = new Gson();
+//                        String json = gson.toJson(jsonArray);
+                        String json = jsonArray.toString();
                         editor.putString("mywallet", json);
                         editor.commit();
 

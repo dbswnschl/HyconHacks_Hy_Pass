@@ -11,7 +11,16 @@
         android:layout_height="wrap_content"
         app:scale_base_height="2295"
         app:scale_base_width="1440">
-
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_copy"
+            app:scale_height="50"
+            app:scale_width="50"
+            app:scale_top="600"
+            app:scale_left="1200"
+            android:background="@drawable/copy"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

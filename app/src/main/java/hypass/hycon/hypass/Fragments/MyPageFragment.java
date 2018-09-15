@@ -1,5 +1,7 @@
 package hypass.hycon.hypass.Fragments;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +39,7 @@ public class MyPageFragment extends Fragment {
     TextView txt_amount_hycon;
     TextView txt_amount_krw;
     TextView txt_nickName;
-
+    ImageButton btn_copy;
     SharedPreferences pref;
     @Nullable
     @Override
@@ -46,7 +49,7 @@ public class MyPageFragment extends Fragment {
         txt_amount_hycon = (TextView)view.findViewById(R.id.txt_amount_hycon);
         txt_amount_krw = (TextView)view.findViewById(R.id.txt_amount_krw);
         txt_nickName = (TextView)view.findViewById(R.id.txt_nickName);
-
+        btn_copy = (ImageButton)view.findViewById(R.id.btn_copy);
 
         return view;
 
@@ -91,5 +94,14 @@ public class MyPageFragment extends Fragment {
 
         }
 
+        btn_copy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ClipboardManager clipboard = (ClipboardManager)getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("Wallet Address", walletId);
+                clipboard.setPrimaryClip(clip);
+                Toast.makeText(getContext(),"Copy Success.",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

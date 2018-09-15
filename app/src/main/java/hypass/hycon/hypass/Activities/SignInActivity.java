@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -74,8 +73,8 @@ public class SignInActivity extends AppCompatActivity {
                         jsonArray.put(myWallet);
 
                     }
-                    Gson gson = new Gson();
-                    String json = gson.toJson(jsonArray);
+
+                    String json = jsonArray.toString();
                     editor.putString("mywallet", json);
 
                     editor.commit();
