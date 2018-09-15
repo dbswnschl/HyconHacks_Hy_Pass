@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -123,11 +124,15 @@ public class SendFragment extends Fragment {
                     postConnection.addParam("password", password);
                     postConnection.addParam("to", currentSelectedAddress);
                     postConnection.addParam("amount", txt_send_hyc.getText().toString());
-                    postConnection.addParam("privatekey", privateKey);
+                    postConnection.addParam("privateKey", privateKey);
                     postConnection.addParam("fee", txt_send_fee.getText().toString());
                     try {
                         postConnection.execute().get();
                         JSONObject resultObj = postConnection.resultObj;
+                        Log.d("TAGG",resultObj.toString());
+                        if(resultObj.toString().contains("txHash") == true){
+                            Toast.makeText(context,"Your Send is Successful",Toast.LENGTH_SHORT).show();
+                        }
 
                     } catch (Exception exc) {
                         exc.printStackTrace();

@@ -100,7 +100,7 @@ public class MyPageFragment extends Fragment {
                 ClipboardManager clipboard = (ClipboardManager)getContext().getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText("Wallet Address", walletId);
                 clipboard.setPrimaryClip(clip);
-                Toast.makeText(getContext(),"Copy Success.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Your Wallet Address is Copied Successful ! ",Toast.LENGTH_SHORT).show();
             }
         });
     }

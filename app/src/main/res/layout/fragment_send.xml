@@ -23,43 +23,40 @@
             app:scale_left="350"
             android:textColor="#FFFFFF"
             android:backgroundTint="#FFFFFF"
-
-
-
             />
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:hint="보낼 금액 입력"
+            android:gravity="left"
+            android:hint="Amount"
             android:id="@+id/txt_send_hyc"
             app:scale_height="200"
-            app:scale_width="780"
+            app:scale_width="750"
             app:scale_top="830"
             app:scale_textsize="85"
             android:textColorHint="#FFFFFF"
             android:textColor="#ffffff"
             android:background="@null"
             android:lines="1"
-            android:inputType="number"
-            app:scale_left="250"/>
+            android:inputType="text"
+            app:scale_left="280"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="right"
+            android:gravity="left"
             android:background="@null"
-            android:hint="Fee 입력"
+            android:hint="Fee"
             android:id="@+id/txt_send_fee"
             app:scale_height="200"
-            app:scale_width="780"
+            app:scale_width="750"
             app:scale_top="1150"
             app:scale_textsize="85"
             android:textColorHint="#FFFFFF"
             android:textColor="#ffffff"
             android:lines="1"
-            android:inputType="number"
-            app:scale_left="250"/>
+            android:inputType="text"
+            app:scale_left="280"/>
 
 
         <ImageButton

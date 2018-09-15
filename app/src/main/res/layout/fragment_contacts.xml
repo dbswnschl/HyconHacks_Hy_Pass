@@ -18,29 +18,29 @@
             android:layout_height="wrap_content"
             android:background="@drawable/friendlist"
             android:id="@+id/btn_friendlist"
-            app:scale_width="961"
-            app:scale_height="179"
+            app:scale_width="504"
+            app:scale_height="79"
             app:scale_top="774"
-            app:scale_left="240"/>
+            app:scale_left="468"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/addfriend"
             android:id="@+id/btn_addfriend"
-            app:scale_width="961"
-            app:scale_height="179"
+            app:scale_width="461"
+            app:scale_height="79"
             app:scale_top="1103"
-            app:scale_left="240"/>
+            app:scale_left="489"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/delfriend"
             android:id="@+id/btn_deletefriend"
-            app:scale_width="961"
-            app:scale_height="179"
+            app:scale_width="462"
+            app:scale_height="79"
             app:scale_top="1432"
-            app:scale_left="240"/>
+            app:scale_left="489"/>
 
     </com.ssomai.android.scalablelayout.ScalableLayout>
 

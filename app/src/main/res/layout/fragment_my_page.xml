@@ -15,10 +15,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_copy"
-            app:scale_height="50"
-            app:scale_width="50"
-            app:scale_top="600"
-            app:scale_left="1200"
+            app:scale_height="100"
+            app:scale_width="100"
+            app:scale_top="520"
+            app:scale_left="670"
             android:background="@drawable/copy"
             />
         <TextView

@@ -109,7 +109,7 @@ public class ContactsFragment extends Fragment {
                             editor.putStringSet("nick", nick);
 
 
-                            editor.commit(); //완료한다.
+                            editor.apply(); //완료한다.
 
                             Toast.makeText(getContext(), "Added Successful !", Toast.LENGTH_SHORT).show();
 
